@@ -1,6 +1,13 @@
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description %>
-  <%= f.association :ingredient %>
-  <%= f.button :submit %>
-<% end %>
+<div class="banner">
+  <h3>INGREDIENT</h3>
+  <%=image_tag("drink.png" , style: 'height: 50px; width: 50px; margin: 20px;') %>
+</div>
+
+<div class="new_cocktail">
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description, stlye: "font-family: 'Poppins', sans-serif;" %>
+    <%= f.association :ingredient, stlye: "font-family: 'Poppins', sans-serif;" %>
+    <%= f.button :submit, style: "border-color: transparent; width: 260px; margin: 20px 0px;"%>
+  <% end %>
+</div>
 

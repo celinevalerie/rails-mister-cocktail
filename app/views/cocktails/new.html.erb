@@ -1,6 +1,13 @@
-<%= simple_form_for(@cocktail) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
+<div class="banner">
+  <h3>Cocktail</h3>
+  <%=image_tag("drink.png" , style: 'height: 50px; width: 50px; margin: 20px;') %>
+</div>
+
+<div class="new_cocktail">
+  <%= simple_form_for(@cocktail) do |f| %>
+    <%= f.label :name, stlye: "font-family: 'Poppins', sans-serif;" %>
+    <%= f.text_field :name, stlye: "font-family: 'Poppins', sans-serif;"%>
+    <%= f.input :photo, as: :file, style: "" %>
+    <%= f.submit class: 'button', style: "border-color: transparent; width: 260px; margin: 20px 0px;" %>
+  <% end %>
+</div>

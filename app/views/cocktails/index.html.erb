@@ -1,13 +1,25 @@
+<div class="banner">
+  <h3>DASHBOARD</h3>
+  <%=image_tag("drink.png" , style: 'height: 50px; width: 50px; margin: 20px;') %>
+</div>
+
 <% @cocktails.each do |cocktail| %>
-  <div class="cocktail_card">
-    <%= image_tag("cocktail1.png", style: "height: 100px; width: 100px;") %>
-      <div class="cocktail_card_text">
-        <h5><%= link_to cocktail.name, cocktail, style: "color: #2B2D42;" %></h5>
-        <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <div class="card">
+    <div class="cocktail_card">
+        <%= cl_image_tag cocktail.photo.key, height: 100, width: 100, crop: :fill %>
+        <div class="cocktail_card_text">
+          <h5><%= link_to cocktail.name, cocktail, style: "color: #2B2D42;" %></h5>
+          <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <i class="fas fa-star" style="color: #5ACCB3; "></i><i class="fas fa-star" style="color: #5ACCB3; "></i><i class="fas fa-star" style="color: #5ACCB3; "></i><i class="fas fa-star" style="color: #5ACCB3; "></i><i class="fas fa-star" style="color: #5ACCB3; "></i>
       </div>
+    </div>
   </div>
 <% end %>
 
 <p></p>
 
-<%= link_to "Add cocktail", new_cocktail_path %>
+<div class="button">
+  <%= link_to "Add cocktail", new_cocktail_path, style: "color: white; text-decoration: none;"%>
+</div>
+
+
