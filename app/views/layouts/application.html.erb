@@ -13,9 +13,18 @@
   </head>
 
   <body>
-  <h1 style="background-image: url(https://www.maxim.com/.image/t_share/MTUwODg5MTM1MDY0NzU0MDA5/cocktails-promo.jpg); color: white; height: 600px; width: 100%; text-align: center; padding: 100px 0px;">Cocktomator</h1>
-
+    <div class="banner">
+      <h3>DASHBOARD</h3>
+      <%=image_tag("drink.png" , style: 'height: 50px; width: 50px; margin: 20px;') %>
+    </div>
   <!-- <img src="https://www.maxim.com/.image/t_share/MTUwODg5MTM1MDY0NzU0MDA5/cocktails-promo.jpg" style="height: 600px; width: 100%;"alt=""> -->
+      <div class="button">
+        <p>Add a cocktail</p>
+      </div>
+
+    </div>
     <%= yield %>
+
+
   </body>
 </html>

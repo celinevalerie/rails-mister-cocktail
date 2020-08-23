@@ -1,17 +1,13 @@
-<h1> My Cocktails </h1>
-
-<div class="container" style="display:flex; margin: 10px;">
-  <% @cocktails.each do |cocktail| %>
-    <div class="card" style="width: 18rem; margin: 10px;">
-      <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=986&q=80" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title"><%= link_to cocktail.name, cocktail %></h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+<% @cocktails.each do |cocktail| %>
+  <div class="cocktail_card">
+    <%= image_tag("cocktail1.png", style: "height: 100px; width: 100px;") %>
+      <div class="cocktail_card_text">
+        <h5><%= link_to cocktail.name, cocktail, style: "color: #2B2D42;" %></h5>
+        <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
-    </div>
-  <% end %>
-</div>
+  </div>
+<% end %>
 
 <p></p>
+
 <%= link_to "Add cocktail", new_cocktail_path %>

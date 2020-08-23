@@ -1,0 +1,13 @@
+.banner {
+  background-image: url("banner_background.png");
+  display: flex;
+  text-align: right;
+  justify-content: space-between;
+  h3 {
+    padding: 30px 30px;
+    color: white;
+    font-size: 24px;
+  }
+}
+
+// height: 50px; width: 50px; margin: 20px;
