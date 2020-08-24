@@ -15,10 +15,23 @@
   <body>
 
   <!-- <img src="https://www.maxim.com/.image/t_share/MTUwODg5MTM1MDY0NzU0MDA5/cocktails-promo.jpg" style="height: 600px; width: 100%;"alt=""> -->
-
     </div>
     <%= yield %>
 
+
+  <div class="footer">
+    <div>
+      <%= link_to image_tag("search.png", style:"width: 40px; height: 40px;"), cocktails_path %>
+      <p>Search</p>
+    </div>
+    <div>
+      <%= link_to image_tag("drink.png", style:"width: 50px; height: 50px;"), cocktails_path %>
+    </div>
+    <div>
+      <%= link_to image_tag("heart.png", style:"width: 40px; height: 40px;"), cocktails_path %>
+      <p>My Favs</p>
+    </div>
+  </div>
 
   </body>
 </html>
